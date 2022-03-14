@@ -1,0 +1,239 @@
+body{
+    max-width: 1100px;
+    min-width: 320px;
+    margin: 0 auto;
+    font:normal14px/1.5 Tahoma,"Lucida Granda",Verdana,"Microsoft Yahei",STXihei,hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+ul{
+    list-style: none;
+    /* 去除无序列表的点 */
+    margin: 0;
+    padding: 0;
+    /* ul没有上面两个的默认值 */
+}
+
+/* 搜索模块 */
+a{
+    text-decoration: none;
+    color: #222;
+    
+    /* 去除下划线 */
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.serch-index{
+    display: flex;
+    position: fixed;/* 固定定位 */
+    top: 0;
+     /* left: 50%; */
+    /* 居中对齐 */
+     /* -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);  */
+    width: 100%;
+    min-width: 320px;
+    max-width: 1000px;
+    /* 固定定位的盒子有宽度 */
+    height: 44px;
+    /* background-color: pink; */
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.search{
+    position: relative;
+    max-width: 1000px;
+
+    /* 覆盖 */
+    height: 26px;
+    line-height: 24px;
+    /* 行高=height-上下边距 */
+    border: 1px solid #ccc;
+    flex: 1;
+    /* background-color: purple; */
+    font-size: 12px;
+    color: #666;
+    padding-left: 30px;
+    /* 图片左移30个像素 */
+    margin: 6px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 2);
+    /* 阴影效果 */
+}
+
+.search::before{
+    content: "";
+    /* display: block; */
+    /* 上面代码会将输入框挤掉，文字无法显示 */
+    /* 块元素   */
+    position: absolute;
+    /* 绝对定位 */
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../css/pixiv01.jpg);
+    /* background-size: 104px auto; */
+    background-size: contain;
+
+    margin: 0px auto -3px;
+    /* 控制pixiv01的位置 */
+
+}
+.user{
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+    font-size: 12px;
+    text-align: center;
+    color:#2eaae0;
+
+}
+.user::before{/*伪元素*/
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../css/sprign.jpg);/*缩放图可不可以，这里他用的是啥精灵图？没听明白*/
+    /* background-size: 104px auto ; */
+    background-size: contain;
+
+    margin: 5px auto 0;
+        /* 控制sprign的位置 */
+
+}
+
+/* :focus */
+.focus{
+    /* padding-left: 400px; */
+    width: auto;
+    padding-top: 60px;
+    /* 下移60个像素 */
+    /* background-size: 104px auto; */
+
+}
+
+.focus img{
+    width: 100%;
+}
+
+/* 局部导航栏 */
+.local-nav{
+    display: flex;
+    width: auto;
+    height: 64px;
+    background-color: #f2f2f2;
+    /* 颜色 */
+    margin: 3px 4px;
+    border-radius: 8px;
+    margin: 60px auto 100px;;
+
+}
+
+.local-nav li{
+    flex: 1;
+}
+
+.local-nav a{
+    display: flex;
+    flex-direction: column;
+    /* y轴设为主轴 */
+    align-items: center;
+    /* 侧轴居中对齐 */
+    /* margin-top: 8px; */
+    font-size: 20px;
+}
+
+/* .local-nav-icon{ */
+    .local-nav li [class^="local-nav-icon-icon1"]{   
+    /* 图片 */
+    width: 32px;
+    height: 32px;
+    background-color:pink;
+    margin-top: 8px;
+    background: url(../upload/pivix07.jpg)no-repeat 0 0 ;
+    background-size: contain;
+    /* background-size: auto; */
+}
+.local-nav li [class^="local-nav-icon-icon2"]{   
+    /* 图片 */
+    width: 32px;
+    height: 32px;
+    background-color:pink;
+    margin-top: 8px;
+    background: url(../upload/pivix05.jpg)no-repeat 0 0 ;
+    background-size: contain;
+}
+
+.local-nav li [class^="local-nav-icon-icon3"]{   
+    /* 图片 */
+    width: 32px;
+    height: 32px;
+    background-color:pink;
+    margin-top: 8px;
+    background: url(../upload/pivix06.jpg)no-repeat 0 0 ;
+    background-size: contain;
+}
+
+.local-nav li [class^="local-nav-icon-icon4"]{   
+    /* 图片 */
+    width: 32px;
+    height: 32px;
+    background-color:pink;
+    margin-top: 8px;
+    background: url(../upload/pivix03.jpg)no-repeat 0 0 ;
+    background-size: contain;
+}
+
+.local-nav li [class^="local-nav-icon-icon5"]{   
+    /* 图片 */
+    width: 32px;
+    height: 32px;
+    background-color:pink;
+    margin-top: 8px;
+    background: url(../upload/pivix04.jpg)no-repeat 0 0 ;
+    background-size: contain;
+}
+
+/* nav */
+nav{
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+.nav-common{
+    display: flex;
+    height: 168px;
+    width: auto;
+    background-color: pink;
+    /* align-items: center; */
+}
+
+.nav-common:nth-child(2){
+    margin: 3px 0;
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items a{
+    flex: 1;
+}
+
+.nav-items:nth-child(-n+2){
+    /* 前两个 */
+    border-right: 1px solid #fff;
+}
